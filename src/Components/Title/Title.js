@@ -5,7 +5,7 @@ class Title extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: "This Is Title Of REACT DOM!",
+            title: "This Is Title Of REACT DOM",
             isInput: false,
         };
     }
@@ -59,22 +59,24 @@ class Title extends Component {
         let output = null;
         if (this.state.isInput) {
             output = (
-                <input
-                    type="text"
-                    className="form-control"
-                    onChange={(event) => this.onChangeHandler(event)}
-                    onKeyPress={(event) => this.onKeyPressHandler(event)}
-                    onBlur={(event) => this.enterHandler(event)}
-                    value={this.state.title}
-                />
+                <div className="m-auto w-50">
+                    <input
+                        type="text"
+                        className="form-control"
+                        onChange={(event) => this.onChangeHandler(event)}
+                        onKeyPress={(event) => this.onKeyPressHandler(event)}
+                        onBlur={(event) => this.enterHandler(event)}
+                        value={this.state.title}
+                    />
+                </div>
             )
         } else {
             output = (
                 <div className="row hover animate__animated animate__backInLeft">
-                    <div className="col-8">
+                    <div className="col-10">
                         <h1 className="display-5 title">{this.state.title}</h1>
                     </div>
-                    <div className="col-4 icon">
+                    <div className="col-2 icon">
                     <span>
                         <i className="fas fa-pencil-alt" onClick={() => this.onClickHandler()}/>
                     </span>
