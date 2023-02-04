@@ -1,0 +1,16 @@
+.title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.hover .icon {
+    opacity: 0;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.hover:hover .icon {
+    opacity: 1;
+    cursor: pointer;
+}
