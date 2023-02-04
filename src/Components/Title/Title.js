@@ -52,7 +52,6 @@ class Title extends Component {
             })
             this.handleEmptyTitle();
         }
-
     }
 
 
