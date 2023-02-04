@@ -17,6 +17,16 @@ class Title extends Component {
         })
     };
 
+    handleEmptyTitle = () => {
+        if(this.state.title === '') {
+            this.setState({
+                ...this.state,
+                title: 'You Forgot To Enter Title!',
+                isInput: false,
+            })
+        }
+    }
+
     onChangeHandler(event) {
         this.setState({
             ...this.state,
@@ -31,6 +41,7 @@ class Title extends Component {
                 isInput: false,
             })
         }
+        this.handleEmptyTitle();
     }
 
     onKeyPressHandler(event) {
@@ -40,6 +51,7 @@ class Title extends Component {
                 isInput: false,
             })
         }
+        this.handleEmptyTitle();
     }
 
 
