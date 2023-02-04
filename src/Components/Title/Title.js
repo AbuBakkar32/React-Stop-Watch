@@ -10,7 +10,7 @@ class Title extends Component {
         };
     }
 
-    onClickHandeler = () => {
+    onClickHandler = () => {
         this.setState({
             ...this.state,
             isInput: true
@@ -18,7 +18,7 @@ class Title extends Component {
     };
 
     handleEmptyTitle = () => {
-        if(this.state.title === '') {
+        if (this.state.title === '') {
             this.setState({
                 ...this.state,
                 title: 'You Forgot To Enter Title!',
@@ -50,8 +50,9 @@ class Title extends Component {
                 ...this.state,
                 isInput: false,
             })
+            this.handleEmptyTitle();
         }
-        this.handleEmptyTitle();
+
     }
 
 
@@ -70,13 +71,13 @@ class Title extends Component {
             )
         } else {
             output = (
-                <div className="row hover">
+                <div className="row hover animate__animated animate__backInLeft">
                     <div className="col-8">
                         <h1 className="display-5 title">{this.state.title}</h1>
                     </div>
                     <div className="col-4 icon">
                     <span>
-                        <i className="fas fa-pencil-alt" onClick={() => this.onClickHandeler()}/>
+                        <i className="fas fa-pencil-alt" onClick={() => this.onClickHandler()}/>
                     </span>
                     </div>
                 </div>
