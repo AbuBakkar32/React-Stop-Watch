@@ -74,7 +74,7 @@ class Title extends Component {
             output = (
                 <div className="row hover animate__animated animate__backInLeft">
                     <div className="col-10">
-                        <h1 className="display-5 title">{this.state.title}</h1>
+                        <h1 className="display-6 title">{this.state.title}</h1>
                     </div>
                     <div className="col-2 icon">
                     <span>
