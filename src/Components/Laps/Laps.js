@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Laps = (props) => {
-
     return (
         <ul className="list-group list-group-flush">
             { props.laps.map((lap, index) => {
