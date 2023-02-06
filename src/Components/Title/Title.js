@@ -73,13 +73,8 @@ class Title extends Component {
         } else {
             output = (
                 <div className="row hover animate__animated animate__backInLeft">
-                    <div className="col-10">
-                        <h1 className="display-6 title">{this.state.title}</h1>
-                    </div>
-                    <div className="col-2 icon">
-                    <span>
-                        <i className="fas fa-pencil-alt" onClick={() => this.onClickHandler()}/>
-                    </span>
+                    <div className="col-12">
+                        <h1 onClick={() => this.onClickHandler()} className="display-6 title">{this.state.title}</h1>
                     </div>
                 </div>
             );
