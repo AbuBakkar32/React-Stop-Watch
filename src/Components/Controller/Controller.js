@@ -34,11 +34,9 @@ class Controller extends Component {
 
         this.props.pause()
     }
-
     lapHandler() {
         this.props.lap()
     }
-
     resetHandler() {
         this.setState({
             start: true,
