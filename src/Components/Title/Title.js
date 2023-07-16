@@ -54,7 +54,6 @@ class Title extends Component {
         }
     }
 
-
     render() {
         let output = null;
         if (this.state.isInput) {
